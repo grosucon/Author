@@ -1,0 +1,15 @@
+<%= form_for(@author) do |f| %>
+
+    <%= hidden_field_tag 'author[project_id]', params[:project_id] %>
+
+    <div class="field">
+      <%= label_tag :author %>
+      <%#= f.select :user_id, options_for_select( User.all ) %>
+      <%= f.select :user_id, User.where.not(type: 'AnonymousUser').collect { |p| [ p.name, p.id ] } %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+
+<% end %>

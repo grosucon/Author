@@ -1,0 +1,10 @@
+<% if @user.authors.any? %>
+
+<h3>Author on projects: </h3>
+<ul>
+  <% @user.authors.each do |author|%>
+      <li> <%= link_to author.project.name, project_path(author.project) %></li>
+  <%end%>
+</ul>
+
+<% end %>

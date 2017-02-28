@@ -1,0 +1,13 @@
+<h2>Author</h2>
+
+<% if @author %>
+
+    <td><%= link_to @author.name, @author.user %></td>
+    <td><%= link_to 'Edit', edit_author_path(@author, project_id: @project.id), class: 'icon icon-edit' %></td>
+    <td><%= link_to 'Delete', @author, method: :delete, data: { confirm: 'Are you sure?' }, class: 'icon icon-del' %></td>
+
+<% else %>
+
+    <%= link_to 'Add author', new_author_path(project_id: @project.id), class: 'icon icon-add' %>
+
+<% end %>
