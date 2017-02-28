@@ -1,3 +1,42 @@
 = authors
 
-Description goes here
+Redmine Authors is a Redmine plugin that adds an <b>author</b> to
+the redmine projects.
+
+==Author
+
+* Grosu Constantin
+
+==Latest stable release
+
+The currently available, latest stable release of the plugin is version <b>0.0.1</b>.
+
+==Compatibility
+
+This plugin is compatible with Redmine 3.3.2 as well as with the current Redmine trunk.
+
+==Requirement
+
+This plugin depends on ruby gem <b>pry</b>
+You can install it with:
+<tt>gem install pry</tt>
+
+==Installation
+
+- Download the plugin from the available sourcehttps://github.com/grosucon/Author
+- Install the plugin as described at: http://www.redmine.org/wiki/redmine/Plugins
+  in a nutshell run:
+  <tt>rake db:migrate_plugins RAILS_ENV=production</tt>
+- Restart Redmine
+
+== Configuration
+
+- Go to http://myredmine.url/roles/report and change permission as see fit
+- Enable the module on a per project basis through Settings -> Module
+
+==Uninstalling
+
+- Remove the directory <i>"author"</i> from the plugin-directory <i>"../vendor/plugins"</i>
+- Restart Redmine
+
+* (C)2017, Grosu Constantin
