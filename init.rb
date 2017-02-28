@@ -8,7 +8,10 @@ Redmine::Plugin.register :authors do
   version '0.0.1'
 
   project_module :authors do
-    permission :authors, { :authors => [:index, :show] }, :public => true
+    permission :view_authors, :authors => :index
+    permission :add_authors, :authors => :create
+    permission :edit_authors, :authors => :update
+    permission :delete_authors, :authors => :destroy
   end
 
   menu :project_menu, :authors, { :controller => 'authors', :action => 'index' }, :caption => 'Authors', :after => :activity, :param => :project_id

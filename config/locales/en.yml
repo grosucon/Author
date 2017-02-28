@@ -1,3 +1,9 @@
 # English strings go here for Rails i18n
 en:
   # my_label: "My label"
+  permission_view_authors: View Authors
+  permission_add_authors: Add Authors
+  permission_update_authors: Edit Authors
+  permission_destroy_authors: Delete Authors
+  author: Author
+  author_on_projects: "Author on projects"
